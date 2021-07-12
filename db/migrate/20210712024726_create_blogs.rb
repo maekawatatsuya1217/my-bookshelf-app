@@ -4,7 +4,6 @@ class CreateBlogs < ActiveRecord::Migration[6.0]
       t.string :title,      null: false
       t.string :catch_copy, null: false
       t.text :article,      null: false
-      t.references :user,   null: false, foreign_key: true
       t.timestamps
     end
   end
