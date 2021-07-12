@@ -27,11 +27,11 @@
 
 ##comments
 
-| Column    | Type       | Options  |
-| --------- | ---------- | -------- |
-| text      | text       | NOT NULL |
-| user      | references |          |
-| blog      | references |          |
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| text      | text       | NOT NULL                       |
+| user      | references | null: false, foreign_key: true |
+| blog      | references | null: false, foreign_key: true |
 
 - belongs_to :user
 - belongs_to :blog
