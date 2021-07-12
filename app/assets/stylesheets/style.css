@@ -41,7 +41,6 @@ a {
 .header{
   background-color: white;
   padding-top: 10px;
-  margin-bottom: 50px;
   background-color: rgb(232, 255, 195);
 }
 
@@ -89,4 +88,5 @@ a {
   left: 550px;
   bottom: 0;
   position: fixed;
+  background-color: rgb(244, 244, 244);
 }
