@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##user
 
-Things you may want to cover:
+| Column        | Type   | Options  |
+| ------------- | ------ | -------- |
+| email         | string | NOT NULL |
+| password      | string | NOT NULL |
+| name          | string | NOT NULL |
+| favorite_book | text   | NOT NULL |
 
-* Ruby version
+ - has_many :blogs
+ - has_many :comments
 
-* System dependencies
+ ##blogs
 
-* Configuration
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| title      | string     | NOT NULL                       |
+| catch_copy | string     | NOT NULL                       |
+| article    | text       | NOT NULL                       |
+| user       | references | null: false, foreign_key: true |
 
-* Database creation
+- belongs_to :user
+- has_many :comments
 
-* Database initialization
 
-* How to run the test suite
+##comments
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| text      | text       | NOT NULL                       |
+| user      | references | null: false, foreign_key: true |
+| blog      | references | null: false, foreign_key: true |
 
-* Deployment instructions
-
-* ...
+- belongs_to :user
+- belongs_to :blog
