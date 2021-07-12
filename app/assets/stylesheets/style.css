@@ -1,0 +1,92 @@
+/* リセットCSS */
+
+* {
+    box-sizing: border-box;
+}
+  
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+  
+li {
+  list-style: none;
+}
+  
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+  
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+
+/* ヘッダー */
+
+.header{
+  background-color: white;
+  padding-top: 10px;
+  background-color: rgb(232, 255, 195);
+}
+
+.inner{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.nav{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 30px;
+}
+
+.logo{
+  width: 200px;
+}
+
+.nav_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin-left:  20px;
+  font-size: 0.8em;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+  border: 1px rgb(123, 123, 123) solid;
+  transition: 0.4s ease;
+  border-radius: 4px;
+  background-color: white;
+}
+.nav_btn:hover{
+  color: black;
+  background: rgb(140, 250, 140);
+  border-radius: 4px;
+}
+
+/* フッター */
+
+.footer{
+  position: absolute;
+  left: 550px;
+  bottom: 0;
+  position: fixed;
+  background-color: rgb(244, 244, 244);
+}
