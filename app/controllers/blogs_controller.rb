@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
-    before_action :authenticate_user!, only: [:new, :create]
-    before_action :blog_build, only: [:show]
+    before_action :authenticate_user!, only: [:new, :create, :edit]
+    before_action :blog_build, only: [:show, :edit, :update]
+    before_action :unless, only: [:edit, :update]
 
     def index
         @blogs = Blog.includes(:user).with_attached_image.order('created_at DESC')
@@ -22,6 +23,17 @@ class BlogsController < ApplicationController
     def show
     end
 
+    def edit
+    end
+
+    def update
+        if @blog.update(blog_params)
+            redirect_to blog_path(@blog)
+        else
+            render :edit
+        end
+    end
+
     private
 
     def blog_params
@@ -30,5 +42,11 @@ class BlogsController < ApplicationController
 
     def blog_build
         @blog = Blog.find(params[:id])
+    end
+
+    def unless
+        unless user_signed_in? && current_user.id == @blog.user.id
+         redirect_to root_path
+        end 
     end
 end

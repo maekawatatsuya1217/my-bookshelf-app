@@ -10,7 +10,7 @@
 
       <% if user_signed_in? && current_user.id == @blog.user_id %>
         <div class="blog_manage">
-          <%= link_to "編集", root_path, class: :user_edit_child %>
+          <%= link_to "編集", edit_blog_path(@blog), class: :user_edit_child %>
           <%= link_to "削除", root_path, method: :delete, class: :user_edit_child %>
           <%= link_to "戻る", root_path, class: :user_edit_child %>
         </div>
