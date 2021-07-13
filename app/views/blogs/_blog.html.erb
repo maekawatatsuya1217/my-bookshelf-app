@@ -1,10 +1,10 @@
 <div class="card">
-  <%= link_to image_tag(blog.image, class: :card_img ), blog_path(blog.id)%>
+  <%= link_to image_tag(blog.image, class: :card_img ), blogs_path %>
   <div class="card_body">
-    <%= link_to blog.title, blog_path(blog.id), class: :card_title%>
+    <%= link_to blog.title, blogs_path, class: :card_title%>
     <p class="card_summary">
-      <%= blog.catch %>
+      <%= blog.catch_copy %>
     </p>
-    <%= link_to blog.user.name, user_path(blog.user.id), class: :card_user %>
+    <%= link_to blog.user.name, blogs_path, class: :card_user %>
   </div>
 </div>
