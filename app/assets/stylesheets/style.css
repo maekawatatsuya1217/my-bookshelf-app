@@ -67,6 +67,11 @@ input{
   width: 200px;
 }
 
+.fa-user{
+  color: black;
+  margin-left: 150px;
+}
+
 .nav_btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -84,10 +89,6 @@ input{
   color: black;
   background: rgb(140, 250, 140);
   border-radius: 4px;
-}
-
-.login_user_name{
-  margin-left: 150px;
 }
 
 

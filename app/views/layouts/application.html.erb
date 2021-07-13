@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <title>My-Bookshelf-App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,6 +20,7 @@
             <div class="nav_right">
               <%= link_to "ブログ", root_path, class: :nav_btn %>
               <%= link_to "ログアウト", root_path, class: :nav_btn %>
+              <i class="fas fa-user fa-fw"></i>
               <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
             </div>  
           <% else %>
