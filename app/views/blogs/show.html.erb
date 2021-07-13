@@ -1,0 +1,42 @@
+<main class="main">
+  <div class="inner">
+    <div class="blog_wrapper">
+
+      <p class="blog_hedding">
+        <%= @blog.title %>
+      </p>
+
+      <%= link_to @blog.user.name, root_path, class: :blog_user %>
+
+      <% if user_signed_in? && current_user.id == @blog.user_id %>
+        <div class="blog_manage">
+          <%= link_to "編集", root_path, class: :user_edit_child %>
+          <%= link_to "削除", root_path, method: :delete, class: :user_edit_child %>
+          <%= link_to "戻る", root_path, class: :user_edit_child %>
+        </div>
+      <% end %>
+      
+      <div class="blog_image">
+        <%= image_tag @blog.image, class: :card_img %>
+      </div>
+
+      <div class="blog_body">
+      <div class="blog_detail_top" ></div>
+        <div class="blog_detail">
+          <p class="detail_title">キャッチコピー</p>
+          <p class="detail_message">
+            <%= safe_join(@blog.catch_copy.split("\n"),tag(:br)) %>
+          </p>
+        </div>
+
+        <div class="blog_detail">
+          <p class="detail_title">記事</p>
+          <p class="detail_message">
+            <%= safe_join(@blog.article.split("\n"),tag(:br)) %>
+          </p>
+        </div>
+        <div class="blog_detail_bottom" ></div>
+      </div>
+    </div>
+  </div>
+</main>

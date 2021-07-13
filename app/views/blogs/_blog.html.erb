@@ -1,7 +1,7 @@
 <div class="card">
-  <%= link_to image_tag(blog.image, class: :card_img ), blogs_path %>
+  <%= link_to image_tag(blog.image, class: :card_img ), blog_path(blog.id) %>
   <div class="card_body">
-    <%= link_to blog.title, blogs_path, class: :card_title%>
+    <%= link_to blog.title, blog_path(blog.id), class: :card_title%>
     <p class="card_summary">
       <%= blog.catch_copy %>
     </p>
