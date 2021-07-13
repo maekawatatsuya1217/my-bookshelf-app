@@ -6,4 +6,6 @@ class Blog < ApplicationRecord
         validates :article
     end
 
+    belongs_to :user
+
 end
