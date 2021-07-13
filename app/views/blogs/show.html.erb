@@ -6,7 +6,7 @@
         <%= @blog.title %>
       </p>
 
-      <%= link_to @blog.user.name, "/users/#{current_user.id}", class: :blog_user %>
+      <%= link_to @blog.user.name, user_path(@blog.user_id), class: :blog_user %>
 
       <% if user_signed_in? && current_user.id == @blog.user_id %>
         <div class="blog_manage">
