@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <title>My-Bookshelf-App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -16,12 +16,19 @@
           <div class="nav_left">
             <%= link_to image_tag("head_logo.png", class: :logo), root_path %>
           </div>
-          <div class="nav_right">
-            <%= link_to "ブログ", root_path, class: :nav_btn %>
-            <%= link_to "ログアウト", root_path, class: :nav_btn %>
-            <%= link_to "新規登録", root_path, class: :nav_btn %>
-            <%= link_to "ログイン", root_path, class: :nav_btn %>
-          </div>
+          <% if user_signed_in? %>
+            <div class="nav_right">
+              <%= link_to "ブログ", root_path, class: :nav_btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav_btn %>
+              <i class="fas fa-user fa-fw"></i>
+              <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
+            </div>  
+          <% else %>
+            <div class="nav_right">
+              <%= link_to "新規登録", new_user_registration_path, class: :nav_btn %>
+              <%= link_to "ログイン", new_user_session_path, class: :nav_btn %>
+            </div>
+          <% end %>
         </div>
       </div>
     </header>

@@ -35,11 +35,16 @@ a {
   color: #3b4043;
 }
 
+input{
+  height: 30px;
+  width: 400px;
+}
+
 
 /* ヘッダー */
 
 .header{
-  background-color: white;
+  background-color: #fff;
   padding-top: 10px;
   background-color: rgb(232, 255, 195);
 }
@@ -62,6 +67,11 @@ a {
   width: 200px;
 }
 
+.fa-user{
+  color: black;
+  margin-left: 150px;
+}
+
 .nav_btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -73,7 +83,7 @@ a {
   border: 1px rgb(123, 123, 123) solid;
   transition: 0.4s ease;
   border-radius: 4px;
-  background-color: white;
+  background-color: #fff;
 }
 .nav_btn:hover{
   color: black;
@@ -81,12 +91,54 @@ a {
   border-radius: 4px;
 }
 
+
 /* フッター */
 
 .footer{
   position: absolute;
-  left: 550px;
+  left: 520px;
   bottom: 0;
   position: fixed;
-  background-color: rgb(244, 244, 244);
+  background-color: rgb(232, 255, 195);
+}
+
+
+/* フォーム周辺 */
+
+.form_wrapper{
+  max-width:600px;
+  margin:50px auto;
+  text-align:center;
+  border-radius:6px;
+  background-color:#FAFAFA;
+}
+
+.field{
+  margin: 20px 0;
+  overflow: scroll;
+  text-align: center;
+}
+
+.form__text {
+  width: 400px;
+  height: 150px;
+}
+
+.form_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: rgb(6, 2, 2);
+  text-decoration: none;
+  user-select: none;
+  background: rgb(140, 250, 140);
+  border: 1px rgb(140, 250, 140) solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form_btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
