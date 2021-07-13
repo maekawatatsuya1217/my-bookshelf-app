@@ -4,15 +4,16 @@
 
 // メイン
 
-.main{
-    background-color: rgb(244, 244, 244);
-}
-
 .blog_inner{
   width: 1200px;
   margin: 0 auto;
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
+}
+
+.page_heading {
+  font-size: 30px;
+  margin-bottom: 28px;
 }
 
 .card_wrapper {
