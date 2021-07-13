@@ -1,0 +1,26 @@
+<%= form_with model: @blog, local: true do |f|%>
+
+  <div class="field">
+    <%= f.label :title, "記事の名称" %><br />
+    <%= f.text_field :title, id:"blog_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :catch_copy, "キャッチコピー" %><br />
+    <%= f.text_area :catch_copy, class: :form_text, id:"blog_catch_copy" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :article, "記事" %><br />
+    <%= f.text_area :article, class: :form_text, id:"blog_concept", size: "10x30" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "記事の画像" %><br />
+    <%= f.file_field :image, id:"blog_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form_btn  %>
+  </div>
+<% end %>

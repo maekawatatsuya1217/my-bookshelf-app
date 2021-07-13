@@ -105,6 +105,11 @@ input{
 
 /* フォーム周辺 */
 
+.page_heading {
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+
 .form_wrapper{
   max-width:600px;
   margin:50px auto;
@@ -119,9 +124,13 @@ input{
   text-align: center;
 }
 
-.form__text {
+.form_text {
   width: 400px;
   height: 150px;
+}
+
+.user__edit__parent{
+  text-align: center;
 }
 
 .form_btn{
