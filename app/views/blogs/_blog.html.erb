@@ -5,6 +5,6 @@
     <p class="card_summary">
       <%= blog.catch_copy %>
     </p>
-    <%= link_to blog.user.name, blogs_path, class: :card_user %>
+    <%= link_to blog.user.name, "/users/#{current_user.id}", class: :card_user %>
   </div>
 </div>
