@@ -15,6 +15,18 @@
   margin-bottom: 28px;
 }
 
+.new_blog_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin: 50px 545px 0 545px;
+  font-size: 0.8em;
+  color: black;
+  background-color: rgb(140, 250, 140);
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+}
+
 .card_wrapper {
   display: flex;
   flex-wrap: wrap;
