@@ -12,11 +12,11 @@
         <div class="blog_manage">
           <%= link_to "編集", edit_blog_path(@blog), class: :user_edit_child %>
           <%= link_to "削除", blog_path(@blog), method: :delete, class: :user_edit_child %>
-          <%= link_to "戻る", root_path, class: :user_edit_child %>
+          <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
         </div>
       <% else %>
         <div class="blog_manage">
-          <%= link_to "戻る", root_path, class: :user_edit_child %>
+          <%= link_to "戻る", 'javascript:history.back()', class: :user_edit_child %>
         </div>
       <% end %>
       
