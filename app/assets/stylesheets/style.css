@@ -39,6 +39,12 @@ a {
 input{
   height: 30px;
   width: 400px;
+  outline: none;
+}
+
+input:-webkit-autofill {
+  border: thin solid rgb(53, 53, 53);
+  box-shadow: 0 0 0 1000px white inset;
 }
 
 
@@ -128,6 +134,7 @@ input{
 .form_text {
   width: 400px;
   height: 150px;
+  outline: none;
 }
 
 .user__edit__parent{
