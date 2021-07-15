@@ -71,41 +71,4 @@ RSpec.describe User, type: :model do
       end
     end
   end
-
-  describe 'ユーザー情報の編集' do
-    context 'ユーザー情報が編集できるとき' do
-     it '正しい情報が入力された時は編集できる' do
-       expect(@user).to be_valid
-     end
-    end
-    context 'ユーザー情報の編集ができないとき' do
-     it 'nameが空だと編集できない' do
-       @user.name = ''
-       @user.valid?
-       expect(@user.errors.full_messages).to include("Name can't be blank")
-     end
-     it 'emailが空だと編集できない' do
-        @user.email = ''
-        @user.valid?
-        expect(@user.errors.full_messages).to include("Email can't be blank")
-     end
-     it '重複したemailが存在する場合登録できない' do
-        @user.save
-        another_user = FactoryBot.build(:user)
-        another_user.email = @user.email
-        another_user.valid?
-        expect(another_user.errors.full_messages).to include("Email has already been taken")
-      end
-      it 'メールアドレスは、@を含む必要があること' do
-        @user.email = 'aa'
-        @user.valid?
-        expect(@user.errors.full_messages).to include("Email is invalid")
-      end
-      it 'favorite_bookが空だと編集できない' do
-        @user.favorite_book = ''
-        @user.valid?
-        expect(@user.errors.full_messages).to include("Favorite book can't be blank")
-      end
-    end
-  end
 end
