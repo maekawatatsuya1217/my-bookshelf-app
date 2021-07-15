@@ -127,3 +127,23 @@
   margin-bottom: 70px;
   background: rgb(140, 250, 140);
 }
+
+// 編集ページ
+
+.blog_edit_back{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  text-align: center;
+  margin: 40px 685px 0;
+  font-size: 0.8em;
+  color: black;
+  background-color: lightgray;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 15px;
+}
+
+.blog_edit_back:hover{
+  color: black;
+  background: rgb(140, 250, 140);
+}
