@@ -1,3 +1,14 @@
+const buildHTML = (XHR) => {
+    const comment = XHR.response.comment;
+    const user = XHR.response.user;
+    const html = `
+          <p>
+            <strong><a href="/users/${comment.user_id}">${user.name}</a>：</strong>
+            ${comment.text}
+          </p>`;
+    return html;
+};
+
 function post (){
     const submit = document.getElementById("submit");
     submit.addEventListener('click', (e) =>{
@@ -11,15 +22,14 @@ function post (){
         XHR.responseType = "json";
         XHR.send(formData);
         XHR.onload = () => {
+            if (XHR.status != 200) {
+              alert(`Error ${XHR.status}: ${XHR.statusText}`);
+              return null;
+            };
             const list = document.getElementById("list");
-            const comment = XHR.response.comment;
-            const user = XHR.response.user;
-            const html = `
-            <p>
-              <strong><a href="/users/${comment.user_id}">${user.name}</a>：</strong>
-              ${comment.text}
-            </p>`;
-        list.insertAdjacentHTML("afterend", html);
+            const formText = document.getElementById("content");
+        list.insertAdjacentHTML("afterend", buildHTML(XHR));
+        formText.value = "";
         }
     })
 };

@@ -43,7 +43,7 @@
         <div class="container">
         <% if user_signed_in? %>
           <%= form_with model: [@blog, @comment],local: true, id: "form" do |form| %>
-            <%= form.text_area :text, placeholder: "コメントする", class: :comment_area %>
+            <%= form.text_area :text, placeholder: "コメントする", class: :comment_area, id: "content" %>
             <%= form.submit "SEND", class: :comment_submit, id: "submit" %>
           <% end %>
         <% end %>
