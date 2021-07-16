@@ -1,8 +1,14 @@
 <div class="main">
   <div class="blog_inner">
+  <div class="main_top">
     <% if user_signed_in? %>
       <%= link_to "新規投稿", new_blog_path, class: :new_blog_btn %>
+      <%= form_with(url: root_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "記事を検索", class: "search-input" %>
+          <%= form.submit "検索する", class: "search-btn" %>
+      <% end %>
     <% end %>
+  </div>
   </div>
   <div class="card_wrapper">
       <%= render partial: 'blog', collection: @blogs %>

@@ -4,6 +4,11 @@
 
 // メイン
 
+.main_top{
+  display: flex;
+  margin: 80px 0 0 360px;
+}
+
 .blog_inner{
   width: 1200px;
   margin: 0 auto;
@@ -18,7 +23,7 @@
 .new_blog_btn{
   display: inline-block;
   padding: 0.4em 1.6em;
-  margin: 50px 545px 0 545px;
+  // margin: 50px 545px 0 545px;
   font-size: 0.8em;
   color: black;
   background-color: rgb(140, 250, 140);
@@ -153,4 +158,17 @@
 .blog_edit_back:hover{
   color: black;
   background: rgb(140, 250, 140);
+}
+
+
+// 検索機能
+
+.search-form .search-input {
+  width: 200px;
+  margin-left: 100px;
+}
+
+.search-form .search-btn {
+  width: 70px;
+  margin-left: 10px;
 }
