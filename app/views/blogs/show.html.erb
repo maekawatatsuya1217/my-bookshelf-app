@@ -42,15 +42,17 @@
 
         <div class="container">
         <% if user_signed_in? %>
-          <%= form_with(model: [@blog, @comment], local: true) do |form| %>
-            <%= form.text_area :text, placeholder: "コメントする", class: :comment_area %>
-            <%= form.submit "SEND", class: :comment_submit %>
+          <%= form_with model: [@blog, @comment],local: true, id: "form" do |form| %>
+            <%= form.text_area :text, placeholder: "コメントする", class: :comment_area, id: "content" %>
+            <%= form.submit "SEND", class: :comment_submit, id: "submit" %>
           <% end %>
         <% end %>
         </div>
-        <div class="comments_parent">
+
+        <div class="comments_parent" id="blog" value=<%= @blog.id %> >
           <div class="comments">
             <h4>＜コメント一覧＞</h4>
+            <div id="list"></div>
             <% @comments.each do |comment| %>
               <p>
                 <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
