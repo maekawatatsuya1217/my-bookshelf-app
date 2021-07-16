@@ -9,7 +9,10 @@ function post (){
         const XHR = new XMLHttpRequest();
         XHR.open("POST", `/blogs/${blogId}/comments`, true);
         XHR.responseType = "json";
-        XHR.send(formData)
+        XHR.send(formData);
+        XHR.onload = () => {
+            console.log(XHR.response);
+        }
     })
 };
 window.addEventListener('load', post)
