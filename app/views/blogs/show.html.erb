@@ -39,6 +39,17 @@
             <%= safe_join(@blog.article.split("\n"),tag(:br)) %>
           </p>
         </div>
+
+        <div class="container">
+        <% if user_signed_in? %>
+          <%= form_with(model: [@blog, @comment], local: true) do |form| %>
+            <%= form.text_area :text, placeholder: "コメントする",  %>
+            <%= form.submit "SEND" %>
+          <% end %>
+        <% else %>
+           <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <% end %>
+        </div>
         <div class="blog_detail_bottom" ></div>
       </div>
     </div>

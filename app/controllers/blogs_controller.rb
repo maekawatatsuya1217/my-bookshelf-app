@@ -21,6 +21,8 @@ class BlogsController < ApplicationController
     end
 
     def show
+        @comment = comment.new
+        @comments = @blog.comments.includes(:user).order(id: "DESC")
     end
 
     def edit
