@@ -11,7 +11,15 @@ function post (){
         XHR.responseType = "json";
         XHR.send(formData);
         XHR.onload = () => {
-            console.log(XHR.response);
+            const list = document.getElementById("list");
+            const comment = XHR.response.comment;
+            const user = XHR.response.user;
+            const html = `
+            <p>
+              <strong><a href="/users/${comment.user_id}">${user.name}</a>：</strong>
+              ${comment.text}
+            </p>`;
+        list.insertAdjacentHTML("afterend", html);
         }
     })
 };

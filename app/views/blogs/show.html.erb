@@ -48,9 +48,11 @@
           <% end %>
         <% end %>
         </div>
+
         <div class="comments_parent" id="blog" value=<%= @blog.id %> >
           <div class="comments">
             <h4>＜コメント一覧＞</h4>
+            <div id="list"></div>
             <% @comments.each do |comment| %>
               <p>
                 <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
