@@ -1,0 +1,16 @@
+<main class="main">
+   <div class="inner">
+   <div class="main_search">
+        <%= link_to "戻る", 'javascript:history.back()', class: :search_back_btn %>
+        <%= form_with(url: search_blogs_path, local: true, method: :get, class: "search-form search-function") do |form| %>
+        <%= form.text_field :keyword, placeholder: "本の名前", class: "search-input" %>
+        <%= form.submit "検索する", class: "search-btn" %>
+        <% end %>
+    </div>
+    <div class="card_wrapper">
+        <% @blogs.each do |blog| %>
+            <%= render partial: "blog", locals: { blog: blog } %>
+        <% end %>
+    </div>
+   </div>
+</main>

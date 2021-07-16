@@ -26,10 +26,15 @@
   // margin: 50px 545px 0 545px;
   font-size: 0.8em;
   color: black;
-  background-color: rgb(140, 250, 140);
+  background-color: rgb(230, 230, 230);
   text-decoration: none;
   user-select: none;
   border-radius: 15px;
+}
+
+.new_blog_btn:hover{
+  color: black;
+  background-color: rgb(140, 250, 140);
 }
 
 .card_wrapper {
@@ -129,15 +134,14 @@
   display: flex;
   flex-direction: column;
   width: 1024px;
-  margin: 10px auto 0;
+  margin: 30px auto 0;
 }
 
 .detail_title{
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 70px;
-  background: rgb(140, 250, 140);
 }
 
 // 編集ページ
@@ -149,7 +153,7 @@
   margin: 40px 685px 0;
   font-size: 0.8em;
   color: black;
-  background-color: lightgray;
+  background-color: #e6e6e6;
   text-decoration: none;
   user-select: none;
   border-radius: 15px;
@@ -163,15 +167,40 @@
 
 // 検索機能
 
+.main_search{
+  display: flex;
+  margin: 80px 0 0 400px;
+}
+
 .search-form .search-input {
   width: 200px;
   margin-left: 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.search_back_btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  text-align: center;
+  margin: 0 20px 0 20px;
+  font-size: 0.8em;
+  color: black;
+  background-color: #e6e6e6;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 15px;
 }
 
 .search-form .search-btn {
   width: 70px;
   margin-left: 10px;
   border: 0px;
-  background-color: rgb(140, 250, 140);
+  background-color: rgb(230, 230, 230);
   border-radius: 15px;
+}
+
+.search-btn:hover{
+  color: black;
+  background-color: rgb(140, 250, 140);
 }
