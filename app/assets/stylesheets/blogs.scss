@@ -4,15 +4,20 @@
 
 // メイン
 
+.header_bottom_content{
+  height: 80px;
+  background-color: #f7f7f7;
+}
+
 .main_top{
   display: flex;
-  margin: 80px 0 0 360px;
+  margin-left: 360px;
 }
 
 .blog_inner{
   width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 
 .page_heading {
@@ -23,7 +28,6 @@
 .new_blog_btn{
   display: inline-block;
   padding: 0.4em 1.6em;
-  // margin: 50px 545px 0 545px;
   font-size: 0.8em;
   color: black;
   background-color: rgb(230, 230, 230);
@@ -50,6 +54,9 @@
 .card {
   width: calc((100% - 50px) / 3);
   margin-bottom: 40px;
+  padding: 20px 0 0 12px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .card_img {
@@ -92,6 +99,11 @@
   min-height: calc(100vh - 161px);
 }
 
+.blog_heading_top{
+  height: 50px;
+  background-color: #f7f7f7;
+}
+
 .blog_hedding{
   font-size: 24px;
   font-weight: bold;
@@ -130,11 +142,11 @@
 }
 
 .blog_detail{
-  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  width: 1024px;
+  width: 800px;
   margin: 30px auto 0;
+  background-color: white;
 }
 
 .detail_title{
@@ -167,9 +179,14 @@
 
 // 検索機能
 
+.top_main_search{
+  height: 80px;
+  background-color: #f7f7f7;
+}
+
 .main_search{
   display: flex;
-  margin: 80px 0 0 400px;
+  margin: 0 0 0 400px;
 }
 
 .search-form .search-input {

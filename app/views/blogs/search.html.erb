@@ -1,5 +1,6 @@
 <main class="main">
    <div class="inner">
+   <div class="top_main_search"></div>
    <div class="main_search">
         <%= link_to "戻る", 'javascript:history.back()', class: :search_back_btn %>
         <%= form_with(url: search_blogs_path, local: true, method: :get, class: "search-form search-function") do |form| %>
