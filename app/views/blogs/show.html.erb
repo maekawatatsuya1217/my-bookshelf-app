@@ -1,7 +1,7 @@
 <main class="main">
   <div class="inner">
     <div class="blog_wrapper">
-
+    <div class="blog_heading_top"></div>
       <p class="blog_hedding">
         <%= @blog.title %>
       </p>
@@ -51,7 +51,7 @@
 
         <div class="comments_parent" id="blog" value=<%= @blog.id %> >
           <div class="comments">
-            <h4>＜コメント一覧＞</h4>
+            <h4 class="comment_title">＜コメント一覧＞</h4>
             <div id="list"></div>
             <% @comments.each do |comment| %>
               <p>
