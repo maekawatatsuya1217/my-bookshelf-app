@@ -181,11 +181,17 @@ input:-webkit-autofill {
   display: flex;
   justify-content: center;
   margin: 10px 0;
-  color: rgb(182, 48, 0);
 }
 
 .error-message {
   font-size: 1.3vw;
-  list-style: none;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+  text-align: start;
+  margin-left: 50px;
+}
+
+.login-flash-message{
+  text-align: center;
   color: rgb(182, 48, 0);
 }
