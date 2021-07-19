@@ -10,5 +10,8 @@ class Category < ActiveHash::Base
         { id: 8, name: 'ビジネス書' },
         { id: 9, name: '経済・経営' },
         { id: 10, name: 'その他' }
-      ]
+    ]
+
+    include ActiveHash::Associations
+    has_many :blogs
 end
