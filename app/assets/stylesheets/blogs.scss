@@ -71,6 +71,7 @@
   font-size: 18px;
   margin-bottom: 15px;
   font-weight: bold;
+  text-align: center;
 }
 
 .card_summary {
@@ -79,7 +80,15 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.card_bottom_area{
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  flex-direction: row-reverse;
 }
 
 .card_user {
@@ -88,7 +97,7 @@
   color: #999;
   text-align: right;
   text-decoration: underline;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-right: 30px;
 }
 
