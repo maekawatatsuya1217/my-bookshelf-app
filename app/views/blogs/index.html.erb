@@ -7,10 +7,15 @@
     <% end %>
 
     <%= form_with(url: search_blogs_path, local: true, method: :get, class: "search-form") do |form| %>
-        <%= form.text_field :keyword, placeholder: "本の名前", class: "search-input" %>
-        <%= form.submit "商品名を検索", class: "search-btn" %>
+      <%= form.text_field :keyword, placeholder: "本の名前で検索", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
     <% end %>
-    
+
+    <%= search_form_for @p, url: search_blogs_path, class: "search-form category-search-form" do |form| %>
+      <%= form.collection_select :category_id_eq, @blogs, :category_id, :category_id,  include_blank: 'カテゴリーで検索', class: "search" %>
+      <%= form.submit '検索', class: "search-btn" %>
+    <% end %>
+
   </div>
   </div>
   <div class="card_wrapper">

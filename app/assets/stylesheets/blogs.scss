@@ -11,7 +11,7 @@
 
 .main_top{
   display: flex;
-  margin-left: 360px;
+  margin-left: 160px;
 }
 
 .blog_inner{
@@ -213,7 +213,7 @@
 
 .main_search{
   display: flex;
-  margin: 0 0 0 400px;
+  margin: 0 0 0 250px;
 }
 
 .search-form .search-input {
@@ -227,7 +227,6 @@
   display: inline-block;
   padding: 0.4em 1.6em;
   text-align: center;
-  margin: 0 20px 0 20px;
   font-size: 0.8em;
   color: black;
   background-color: #e6e6e6;
@@ -242,6 +241,10 @@
   border: 0px;
   background-color: rgb(230, 230, 230);
   border-radius: 15px;
+}
+
+.search-btn{
+  margin-right: 100px;
 }
 
 .search-btn:hover{
