@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :blog do
-    title      {'HTMLについて'}
-    catch_copy {'1分でわかります'}
-    article    {'ビジネス書です。'}
+    title       {'HTMLについて'}
+    catch_copy  {'1分でわかります'}
+    article     {'ビジネス書です。'}
+    category_id { 2 }
 
     association :user
 
