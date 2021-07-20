@@ -14,12 +14,13 @@
 
  ##blogs
 
-| Column     | Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| title      | string     | NOT NULL                       |
-| catch_copy | string     | NOT NULL                       |
-| article    | text       | NOT NULL                       |
-| user       | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| title       | string     | NOT NULL                       |
+| catch_copy  | string     | NOT NULL                       |
+| article     | text       | NOT NULL                       |
+| category_id | integer    | NOT NULL                       |
+| user        | references | null: false, foreign_key: true |
 
 - belongs_to :user
 - has_many :comments
