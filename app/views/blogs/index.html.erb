@@ -4,18 +4,11 @@
   <div class="main_top">
     <% if user_signed_in? %>
       <%= link_to "新規投稿", new_blog_path, class: :new_blog_btn %>
+      <%= form_with(url: search_blogs_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "本の名前", class: "search-input" %>
+          <%= form.submit "検索する", class: "search-btn" %>
+      <% end %>
     <% end %>
-
-    <%= form_with(url: search_blogs_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "本の名前で検索", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
-    <% end %>
-
-    <%= search_form_for @p, url: search_blogs_path, class: "search-form category-search-form" do |form| %>
-      <%= form.collection_select :category_id_eq, @blogs, :category_id, :category_id,  include_blank: 'カテゴリーで検索', class: "search" %>
-      <%= form.submit '検索', class: "search-btn" %>
-    <% end %>
-
   </div>
   </div>
   <div class="card_wrapper">

@@ -2,8 +2,6 @@ class BlogsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
     before_action :blog_build, only: [:show, :edit, :update, :destroy]
     before_action :unless, only: [:edit, :update, :destroy]
-    before_action :search_category_method, only: [:index,:search]
-    before_action :search_category
 
     def index
         @blogs = Blog.includes(:user).with_attached_image.order('created_at DESC')
@@ -47,11 +45,6 @@ class BlogsController < ApplicationController
         @blogs = Blog.search(params[:keyword]).includes(:user).with_attached_image.order('created_at DESC')
     end
 
-    def search_category
-        @results = @p.result.includes(:blog).includes(:user).with_attached_image.order('created_at DESC')
-        binding.pry
-    end
-
     private
 
     def blog_params
@@ -66,9 +59,5 @@ class BlogsController < ApplicationController
         unless user_signed_in? && current_user.id == @blog.user.id
          redirect_to root_path
         end 
-    end
-
-    def search_category_method
-        @p = Blog.ransack(params[:q])
     end
 end
