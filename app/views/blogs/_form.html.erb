@@ -18,6 +18,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :category_id, "カテゴリー" %><br />
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
     <%= f.label :image, "記事の画像" %><br />
     <%= f.file_field :image, id:"blog_image" %>
   </div>
