@@ -8,10 +8,15 @@
         <%= form.submit "検索する", class: "search-btn" %>
         <% end %>
     </div>
-    <div class="card_wrapper">
-        <% @blogs.each do |blog| %>
-            <%= render partial: "blog", locals: { blog: blog } %>
-        <% end %>
-    </div>
+    <% if @blogs.length != 0 %>
+        <div class="card_wrapper">
+            <% @blogs.each do |blog| %>
+                <%= render partial: "blog", locals: { blog: blog } %>
+            <% end %>
+        </div>
+    <% else %>
+        <h2 class="no_result_text">検索結果が見つかりませんでした</h2>
+        <%= image_tag 'think.png', class: :think_img %>
+    <% end %>
    </div>
 </main>
