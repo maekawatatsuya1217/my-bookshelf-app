@@ -1,3 +1,84 @@
 // Place all the styles related to the memos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// メイン
+
+.memo{
+    height: calc(100vh - 110px - 24px);
+    width: 100vw;
+    display: flex;
+}
+
+.side_bar_area{
+    height: calc(100vh - 110px - 24px);
+    width: 300px;
+    background-color: #f7f7f7;
+    padding: 20px 20px 55px 20px;
+}
+
+.side_bar_area_child{
+    height: 100px;
+    padding: 20px 20px;
+}
+
+.book_name{
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.main_area{
+    height: calc(100vh - 110px - 24px);
+    width: calc(100vw - 300px);
+    background-color: #fff;
+    padding: 50px 50px 85px
+}
+
+// ボタンのエリア
+
+.memo_btn_area{
+    height: 70px;
+    width: 700px;
+    background-color: #f7f7f7;
+    border-radius: 35px;
+    margin: 0 auto 50px
+}
+
+.memo_edit_btn{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 20px  50px 20px 200px;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    background-color: #fff;
+  }
+  .memo_edit_btn:hover{
+    color: black;
+    background: rgb(140, 250, 140);
+    border-radius: 15px;
+  }
+
+  .memo_destroy_btn{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 20px  50px 20px 100px;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    background-color: #fff;
+  }
+  .memo_destroy_btn:hover{
+    color: black;
+    background: rgb(140, 250, 140);
+    border-radius: 15px;
+  }
