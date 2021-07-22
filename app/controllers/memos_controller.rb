@@ -1,9 +1,9 @@
 class MemosController < ApplicationController
 
-    before_action :authenticate_user!, only: [:index, :new, :create]
+    before_action :authenticate_user!, only: [:index, :new, :create, :edit, :destroy]
     before_action :memo_definition, only: [:index, :show]
-    before_action :memo_build, only: [:show, :edit, :update]
-    before_action :unless, only: [:edit, :update]
+    before_action :memo_build, only: [:show, :edit, :update, :destroy]
+    before_action :unless, only: [:edit, :update, :destroy]
 
     def index
     end
@@ -33,6 +33,11 @@ class MemosController < ApplicationController
         else
             render :edit
         end
+    end
+
+    def destroy
+        @memo.destroy
+        redirect_to memos_path
     end
 
     private

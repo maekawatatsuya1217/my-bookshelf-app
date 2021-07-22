@@ -13,7 +13,7 @@
     <div class="memo_btn_area">
         <%= link_to "戻る", 'javascript:history.back()', class: :memo_back_btn %>
         <%= link_to "編集", edit_memo_path(@memo), class: :memo_btn %>
-        <%= link_to "削除", memos_path, class: :memo_btn %>
+        <%= link_to "削除", memo_path(@memo), method: :delete, class: :memo_btn %>
     </div>
     <div class="memo_content">
       <div class="point_area">
