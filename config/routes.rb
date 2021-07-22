@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :edit, :update]
-  resources :memos, only: [:index, :new, :create]
+  resources :memos, only: [:index, :new, :create, :show]
 end

@@ -18,6 +18,10 @@
     padding: 20px 20px 55px 20px;
 }
 
+.memo_list{
+    text-align: center;
+}
+
 .side_bar_area_child{
     height: 100px;
     padding: 20px 20px;
@@ -35,6 +39,18 @@
     padding: 30px 50px 85px
 }
 
+.top_message{
+    text-align: center;
+    margin-bottom: 80px;
+    display: block;
+}
+
+.memo_img{
+    height: 250px;
+    width: 500px;
+    margin-left: 270px;
+}
+
 // ボタンのエリア
 
 .memo_btn_area{
@@ -48,7 +64,7 @@
 .memo_add_btn{
     display: inline-block;
     padding: 0.4em 1.6em;
-    margin: 20px  50px 20px 140px;
+    margin: 50px 465px 50px;
     font-size: 0.8em;
     color: black;
     text-decoration: none;
@@ -59,6 +75,25 @@
     background-color: #fff;
 }
 .memo_add_btn:hover{
+    color: black;
+    background: rgb(140, 250, 140);
+    border-radius: 15px;
+}
+
+.memo_back_btn{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 20px  50px 20px 140px;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.memo_back_btn:hover{
     color: black;
     background: rgb(140, 250, 140);
     border-radius: 15px;
