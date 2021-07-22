@@ -3,7 +3,7 @@
     <div class="side_bar_area_child">
       <% @memos.each do |memo| %>
         <div class="book_name">
-          <%= memo.name %>
+          <%= link_to memo.name, memos_path(memo) %>
         </div>
       <% end %>
     </div>
