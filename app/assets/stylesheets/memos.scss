@@ -45,10 +45,10 @@
     margin: 0 auto 30px
 }
 
-.memo_edit_btn{
+.memo_add_btn{
     display: inline-block;
     padding: 0.4em 1.6em;
-    margin: 20px  50px 20px 250px;
+    margin: 20px  50px 20px 140px;
     font-size: 0.8em;
     color: black;
     text-decoration: none;
@@ -58,13 +58,13 @@
     border-radius: 15px;
     background-color: #fff;
 }
-.memo_edit_btn:hover{
+.memo_add_btn:hover{
     color: black;
     background: rgb(140, 250, 140);
     border-radius: 15px;
 }
 
-.memo_destroy_btn{
+.memo_btn{
     display: inline-block;
     padding: 0.4em 1.6em;
     margin: 20px  50px 20px 100px;
@@ -78,7 +78,7 @@
     background-color: #fff;
 }
 
-.memo_destroy_btn:hover{
+.memo_btn:hover{
     color: black;
     background: rgb(140, 250, 140);
     border-radius: 15px;

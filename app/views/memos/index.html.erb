@@ -10,8 +10,9 @@
   </div>
   <div class="main_area">
     <div class="memo_btn_area">
-        <%= link_to "編集", memos_path, class: :memo_edit_btn %>
-        <%= link_to "削除", memos_path, class: :memo_destroy_btn %>
+        <%= link_to "追加", new_memo_path, class: :memo_add_btn %>
+        <%= link_to "編集", memos_path, class: :memo_btn %>
+        <%= link_to "削除", memos_path, class: :memo_btn %>
     </div>
     <%= render "main_area" %>
   </div>
