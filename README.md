@@ -36,3 +36,15 @@
 
 - belongs_to :user
 - belongs_to :blog
+
+
+##memos
+
+| Column | Type       | Options                        |
+| -------| ---------- | ------------------------------ |
+| name   | string     | NOT NULL                       |
+| point  | text       | NOT NULL                       |
+| text   | text       | NOT NULL                       |
+| user   | references | null: false, foreign_key: true |
+
+- belongs_to :user
