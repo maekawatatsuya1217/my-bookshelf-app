@@ -32,23 +32,23 @@
     height: calc(100vh - 110px - 24px);
     width: calc(100vw - 300px);
     background-color: #fff;
-    padding: 50px 50px 85px
+    padding: 30px 50px 85px
 }
 
 // ボタンのエリア
 
 .memo_btn_area{
     height: 70px;
-    width: 700px;
+    width: 800px;
     background-color: #f7f7f7;
     border-radius: 35px;
-    margin: 0 auto 50px
+    margin: 0 auto 30px
 }
 
 .memo_edit_btn{
     display: inline-block;
     padding: 0.4em 1.6em;
-    margin: 20px  50px 20px 200px;
+    margin: 20px  50px 20px 250px;
     font-size: 0.8em;
     color: black;
     text-decoration: none;
@@ -57,14 +57,14 @@
     transition: 0.4s ease;
     border-radius: 15px;
     background-color: #fff;
-  }
-  .memo_edit_btn:hover{
+}
+.memo_edit_btn:hover{
     color: black;
     background: rgb(140, 250, 140);
     border-radius: 15px;
-  }
+}
 
-  .memo_destroy_btn{
+.memo_destroy_btn{
     display: inline-block;
     padding: 0.4em 1.6em;
     margin: 20px  50px 20px 100px;
@@ -76,9 +76,49 @@
     transition: 0.4s ease;
     border-radius: 15px;
     background-color: #fff;
-  }
-  .memo_destroy_btn:hover{
+}
+
+.memo_destroy_btn:hover{
     color: black;
     background: rgb(140, 250, 140);
     border-radius: 15px;
-  }
+}
+
+// 詳細情報
+
+.memo_content{
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 35px;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.point_area{
+    height: 410px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 10px 10px 10px;
+}
+
+.text_area{
+    height: 410px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 10px 10px 10px;
+}
+
+.content_title{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.memo_content_text{
+    font-size: 15px;
+}
