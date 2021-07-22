@@ -1,0 +1,23 @@
+<%= form_with model: @memo, local: true do |f|%>
+
+<%= render 'devise/shared/error_messages', model: f.object %>
+
+  <div class="field">
+    <%= f.label :name, "本の名前" %><br />
+    <%= f.text_field :name, id:"memo_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :point, "要点" %><br />
+    <%= f.text_area :point, class: :form_text, id:"memo_point" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text, "メモ" %><br />
+    <%= f.text_area :text, class: :form_text, id:"memo_text", size: "10x30" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form_btn  %>
+  </div>
+<% end %>
