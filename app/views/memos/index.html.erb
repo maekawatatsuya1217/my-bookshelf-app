@@ -1,0 +1,17 @@
+<div class="memo">
+  <div class="side_bar_area">
+    <h3 class="memo_list">＜メモ一覧＞</h2>
+    <div class="side_bar_area_child">
+      <% @memos.each do |memo| %>
+        <div class="book_name">
+          <%= link_to "＃#{memo.name}", memo_path(memo) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="main_area">
+        <%= link_to "メモを追加", new_memo_path, class: :memo_add_btn %>
+        <h2 class="top_message">メモ一覧から表示するメモを選んでください</h2>
+        <%= image_tag 'mail_search.png', class: :memo_img %>
+  </div>
+</div>

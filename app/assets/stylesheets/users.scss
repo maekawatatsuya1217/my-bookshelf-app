@@ -5,7 +5,7 @@
 /* ユーザーページ */
 
 .user_wrapper{
-  min-height: calc(100vh - 161px);
+  min-height: calc(100vh - 135px);
   width: 1024px;
   margin: 0 auto;
 }
@@ -69,6 +69,10 @@
   width: 70%;
   padding: 16px 8px;
   background-color: #fff;
+}
+
+.table_bottom_space{
+  height: 40px;
 }
   
 .user_card {
