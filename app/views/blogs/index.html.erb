@@ -17,6 +17,7 @@
         <%= render partial: 'blog', collection: @blogs %>
     </div>
   <% else %>
-    <h2 class="blog_post_message">記事を投稿して、みんなにシェアしましょう！</h2>
+    <h2 class="blog_post_message">記事を投稿して、他のユーザにシェアしましょう！</h2>
+    <%= image_tag 'new_blog.png', class: :blog_img %>
   <% end %>
 </div>
