@@ -12,7 +12,12 @@
     <% end %>
   </div>
   </div>
-  <div class="card_wrapper">
-      <%= render partial: 'blog', collection: @blogs %>
-  </div>
+  <% if @blogs.length != 0 %>
+    <div class="card_wrapper">
+        <%= render partial: 'blog', collection: @blogs %>
+    </div>
+  <% else %>
+    <h2 class="blog_post_message">記事を投稿して、他のユーザにシェアしましょう！</h2>
+    <%= image_tag 'new_blog.png', class: :blog_img %>
+  <% end %>
 </div>
