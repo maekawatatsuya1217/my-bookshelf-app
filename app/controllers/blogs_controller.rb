@@ -6,6 +6,7 @@ class BlogsController < ApplicationController
 
     def index
         @blogs = Blog.includes(:user).with_attached_image.order('created_at DESC')
+        set_blog_column
     end
 
     def new
@@ -43,7 +44,8 @@ class BlogsController < ApplicationController
     end
 
     def search
-        @results = @p.result
+        @blogs = @p.result
+        set_blog_column
     end
 
     private
@@ -64,5 +66,9 @@ class BlogsController < ApplicationController
 
     def search_blog
         @p = Blog.ransack(params[:q])
+    end
+
+    def set_blog_column
+        @blog_name = Blog.select("title").distinct
     end
 end
