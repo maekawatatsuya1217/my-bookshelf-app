@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "blogs#index"
+  root to: "tops#index"
   resources :blogs do
     resources :comments, only: :create
     collection do
