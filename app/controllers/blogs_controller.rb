@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
     def create
         @blog = Blog.new(blog_params)
         if @blog.save
-            redirect_to root_path
+            redirect_to blogs_path
         else
             render :new
         end
@@ -40,7 +40,7 @@ class BlogsController < ApplicationController
 
     def destroy
         @blog.destroy
-        redirect_to root_path
+        redirect_to blogs_path
     end
 
     def search
@@ -60,7 +60,7 @@ class BlogsController < ApplicationController
 
     def unless
         unless user_signed_in? && current_user.id == @blog.user.id
-         redirect_to root_path
+         redirect_to blogs_path
         end 
     end
 
