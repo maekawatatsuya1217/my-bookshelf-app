@@ -4,10 +4,9 @@
    <div class="main_search">
         <%= link_to "戻る", 'javascript:history.back()', class: :search_back_btn %>
         <%= search_form_for @p, url: search_blogs_path, class: "search-form search-function" do |f| %>
-          <%= f.text_field :title_cont, placeholder: "本の名前を検索", class: "search-input" %>
+          <%= f.text_field :title_cont, placeholder: "本の名前を検索", class: "search-input-b" %>
           <br>
-          <%= f.label :category_name_eq, 'カテゴリー：' %>
-          <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: '指定なし' %>
+          <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: 'カテゴリーを選択' %>
           <br>
           <%= f.submit '検索', class: "search-btn" %>
         <% end %>
