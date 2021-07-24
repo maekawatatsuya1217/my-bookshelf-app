@@ -224,7 +224,7 @@
 
 .main_search{
   display: flex;
-  margin: 0 0 0 400px;
+  margin: 0 0 0 330px;
 }
 
 .search-form .search-input {
@@ -232,6 +232,17 @@
   margin-left: 100px;
   border: 1px solid black;
   border-radius: 8px;
+}
+
+.search-input-b{
+  width: 200px;
+  margin: 0 10px 0 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.search_category_message{
+  margin-top: 3.5px;
 }
 
 .search_back_btn{
@@ -245,6 +256,16 @@
   text-decoration: none;
   user-select: none;
   border-radius: 15px;
+  height: 30px;
+}
+
+#q_category_id_eq{
+  border-radius: 8px;
+}
+
+.search_back_btn:hover{
+  color: black;
+  background-color: rgb(140, 250, 140);
 }
 
 .search-form .search-btn {
@@ -253,6 +274,10 @@
   border: 0px;
   background-color: rgb(230, 230, 230);
   border-radius: 15px;
+}
+
+.search-function{
+  display: flex;
 }
 
 .search-btn:hover{

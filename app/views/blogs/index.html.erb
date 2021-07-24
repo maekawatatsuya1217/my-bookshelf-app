@@ -6,10 +6,11 @@
       <%= link_to "新規投稿", new_blog_path, class: :new_blog_btn %>
     <% end %>
 
-    <%= form_with(url: search_blogs_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "本の名前", class: "search-input" %>
-      <%= form.submit "検索する", class: "search-btn" %>
+    <%= search_form_for @p, url: search_blogs_path, class: "search-form" do |form| %>
+      <%= form.text_field :title_cont, placeholder: "本の名前を検索", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
     <% end %>
+
   </div>
   </div>
   <% if @blogs.length != 0 %>

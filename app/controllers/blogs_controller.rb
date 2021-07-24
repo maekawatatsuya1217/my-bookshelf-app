@@ -2,9 +2,11 @@ class BlogsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
     before_action :blog_build, only: [:show, :edit, :update, :destroy]
     before_action :unless, only: [:edit, :update, :destroy]
+    before_action :search_blog, only: [:index, :search]
 
     def index
         @blogs = Blog.includes(:user).with_attached_image.order('created_at DESC')
+        set_blog_column
     end
 
     def new
@@ -42,7 +44,8 @@ class BlogsController < ApplicationController
     end
 
     def search
-        @blogs = Blog.search(params[:keyword]).includes(:user).with_attached_image.order('created_at DESC')
+        @blogs = @p.result.includes(:user).with_attached_image.order('created_at DESC')
+        set_blog_column
     end
 
     private
@@ -59,5 +62,13 @@ class BlogsController < ApplicationController
         unless user_signed_in? && current_user.id == @blog.user.id
          redirect_to root_path
         end 
+    end
+
+    def search_blog
+        @p = Blog.ransack(params[:q])
+    end
+
+    def set_blog_column
+        @blog_name = Blog.select("title").distinct
     end
 end
