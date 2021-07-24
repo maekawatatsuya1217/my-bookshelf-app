@@ -44,7 +44,7 @@ class BlogsController < ApplicationController
     end
 
     def search
-        @blogs = @p.result
+        @blogs = @p.result.includes(:user).with_attached_image.order('created_at DESC')
         set_blog_column
     end
 
