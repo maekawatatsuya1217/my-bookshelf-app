@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>purogramming-learning-application</title>
+    <title>My-Bookshelf-App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -9,5 +9,45 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header>
+    <%# ヘッダーメニュー %>
+      <div class="header_menu">
+        <div class="area_logo_header">
+          <%= link_to image_tag("head_logo.png", class: :logo), root_path %>
+        </div>
+        <% if user_signed_in? %>
+          <div class="nav_right">
+            <%= link_to "ブログ", blogs_path, class: :nav_btn %>
+            <%= link_to "メモ帳", memos_path, class: :nav_btn %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav_btn %>
+            <i class="fas fa-user fa-fw"></i>
+            <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
+          </div>  
+        <% else %>
+          <div class="nav_right">
+            <%= link_to "ブログ", blogs_path, class: :nav_btn %>
+            <%= link_to "メモ帳", memos_path, class: :nav_btn %>
+            <%= link_to "ログイン", new_user_session_path, class: :nav_btn %>
+            <%= link_to "新規登録", new_user_registration_path, class: :nav_btn %>
+          </div>
+        <% end %>
+      </div>
+    </header>
+    <%# メイン %>
+    <main>
+      <div class="area_top_view">
+        <div class="container">
+          <%= image_tag("top_view.png", class: :top_view_img) %>
+          <div class="top_message1">あなたの好きな本、</div>
+          <div class="top_message2">もっと<b class="kigaru">気軽</b>に<b class="shea">シェア</b></div>
+          <div class="top_message3">しませんか？</div>
+        </div>
+      </div>
+      <%# このアプリの概要 %>
+      <%# このアプリの対象者 %>
+      <%# このアプリの機能 %>
+      <%# もっと気軽にシェアしませんか？ %>
+    </main>
+    <footer></footer>
   </body>
 </html>
