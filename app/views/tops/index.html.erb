@@ -36,8 +36,7 @@
     <%# メイン %>
     <main>
       <div class="area_top_view">
-        <div class="container">
-          <%= image_tag("top_view.png", class: :top_view_img) %>
+        <div class="container" style="background-image: url('<%= asset_path('top_view.png') %>')");>
           <div class="top_message1">あなたの好きな本、</div>
           <div class="top_message2">もっと<b class="kigaru">気軽</b>に<b class="shea">シェア</b></div>
           <div class="top_message3">しませんか？</div>
