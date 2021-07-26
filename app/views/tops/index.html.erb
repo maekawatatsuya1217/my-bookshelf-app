@@ -43,7 +43,7 @@
         </div>
       </div>
       <%# このアプリの概要 %>
-      <div class="area_overview">
+      <div class="area_top_page">
         <div class="head_home">
           <div class="head_message"><b>ABOUT</b></div>
           <div class="head_message_mini"><b>〜何ができるの？〜</b></div>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <%# 好きな本をシェアしよう！ %>
-      <div class="area_overview">
+      <div class="area_top_page">
         <div class="head_home">
           <div class="head_message"><b>SHARE</b></div>
           <div class="head_message_mini"><b>〜本をシェアしよう〜</b></div>
@@ -79,7 +79,7 @@
         </div>
       </div>
       <%# 様々な本にで会おう！ %>
-      <div class="area_overview">
+      <div class="area_top_page">
         <div class="head_home">
           <div class="head_message"><b>ENCOUNTER</b></div>
           <div class="head_message_mini"><b>〜本と出会おう〜</b></div>
@@ -97,7 +97,31 @@
         </div>
       </div>
       <%# このアプリの機能 %>
-      <%# もっと気軽にシェアしませんか？ %>
+      <div class="area_top_page">
+        <div class="head_home">
+          <div class="head_message"><b>FUNCTION</b></div>
+          <div class="head_message_mini"><b>〜アプリの機能〜</b></div>
+        </div>
+        <div class="body_home">
+          <ul class="list_feature">
+            <li>
+              <%= image_tag 'share.png', size: '120x120' %>
+              <p class="ttl"><b><%= link_to "シェア", root_path, class: :function_list %></b></p>
+              <p class="description">毎日の学習で身につけた技術やエラーの解消方法を<br>隙間時間にブログの記事にまとめ公開することによ<br>ってアウトプットを積極的に行う事ができます。</p>
+            </li>
+            <li>
+              <%= image_tag 'search.png', size: '120x120' %>
+              <p class="ttl"><b><%= link_to "マッチ", root_path, class: :function_list %></b></p>
+              <p class="description">毎日の学習を通して良かった点や明日から改善した<br>い点を言語化します。フォームの記述をすることで<br>より良い学習方法を考える機会を提供します。</p>
+            </li>
+            <li>
+              <%= image_tag 'memo.png' , size: '120x120' %>
+              <p class="ttl"><b><%= link_to "メモ", root_path, class: :function_list %></b></p>
+              <p class="description">毎日の学習の予定をカレンダーにまとめ、エンジニ<br>アに必要な自己管理能力の向上を目指します。スケ<br>ジュール管理を習慣にすることができます。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
     <footer></footer>
   </body>
