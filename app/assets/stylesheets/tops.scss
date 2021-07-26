@@ -57,19 +57,18 @@
 
 // メイン
 
+// 2分割レイアウト
+
 .head_message{
     display: flex;
     justify-content: center;
     font-size: 40px;
 }
 
-// 2分割レイアウト
-
-
-
 .area_overview{
     height: 600px;
     padding: 50px;
+    margin: 70px 0;
 }
 
 .body_home{
