@@ -106,18 +106,21 @@
           <ul class="list_feature">
             <li>
               <%= image_tag 'share.png', size: '120x120' %>
-              <p class="ttl"><b><%= link_to "シェア", root_path, class: :function_list %></b></p>
+              <p class="ttl"><b><%= link_to "シェア", new_blog_path, class: :function_list %></b></p>
               <p class="description">読んでみて「面白かった本」「おすすめの本」をブログの記事にして投稿しましょう。多くのユーザーに簡単に本をシェアすることができます。</p>
+              <%= link_to "シェアする", new_blog_path, class: :description_bottom_btn %>
             </li>
             <li>
               <%= image_tag 'search.png', size: '120x120' %>
-              <p class="ttl"><b><%= link_to "マッチ", root_path, class: :function_list %></b></p>
+              <p class="ttl"><b><%= link_to "マッチ", search_blogs_path, class: :function_list %></b></p>
               <p class="description">他のユーザーの記事を見ることで、今までに出会ったことのない本と出会うことができます。記事を読み新しい本との出会いを探しましょう。</p>
+              <%= link_to "マッチする", search_blogs_path, class: :description_bottom_btn %>
             </li>
             <li>
               <%= image_tag 'memo.png' , size: '120x120' %>
-              <p class="ttl"><b><%= link_to "メモ", root_path, class: :function_list %></b></p>
+              <p class="ttl"><b><%= link_to "メモ", new_memo_path, class: :function_list %></b></p>
               <p class="description">読書で「面白かった！」「感動した！」と思ったことをメモに残しましょう。あなたの本との出会いを毎日記録することで、日記を作れます。</p>
+              <%= link_to "メモする", search_blogs_path, class: :description_bottom_btn %>
             </li>
           </ul>
         </div>
