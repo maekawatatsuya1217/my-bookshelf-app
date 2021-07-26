@@ -123,6 +123,21 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <% if user_signed_in? %>
+          <div class="top_footer">
+            <%= link_to "ブログ", blogs_path, class: :footer_logout_btn %>
+            <%= link_to "メモ帳", memos_path, class: :footer_logout_btn %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :footer_logout_btn %>
+          </div>  
+        <% else %>
+          <div class="top_footer">
+            <%= link_to "ブログ", blogs_path, class: :footer_login_btn %>
+            <%= link_to "メモ帳", memos_path, class: :footer_login_btn %>
+            <%= link_to "ログイン", new_user_session_path, class: :footer_login_btn %>
+            <%= link_to "新規登録", new_user_registration_path, class: :footer_login_btn %>
+          </div>
+        <% end %>
+    </footer>
   </body>
 </html>

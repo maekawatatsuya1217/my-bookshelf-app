@@ -150,3 +150,51 @@
 .function_list{
     color: black;
 }
+
+// フッター
+
+.top_footer{
+    height: 100px;
+    background-color: rgb(161, 250, 219);
+    padding: 35px 300px;
+}
+
+.footer_login_btn{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 0 59.7px;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.footer_login_btn:hover{
+    color: black;
+    background: rgb(154, 249, 215);
+    border-radius: 15px;
+}
+
+.footer_logout_btn{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 0 93.8px;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.footer_logout_btn:hover{
+    color: black;
+    background: rgb(154, 249, 215);
+    border-radius: 15px;
+}
