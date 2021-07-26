@@ -45,7 +45,7 @@
       <%# このアプリの概要 %>
       <div class="area_overview">
         <div class="head_home">
-          <div class="head_message">My-bookshelf-Appって何？</div>
+          <div class="head_message"><b>My-bookshelf-Appって何？</b></div>
         </div>
         <div class="body_home">
           <div class="layout_2_div">
@@ -62,20 +62,37 @@
       <%# 好きな本をシェアしよう！ %>
       <div class="area_overview">
         <div class="head_home">
-          <div class="head_message">好きな本をシェアしよう！</div>
+          <div class="head_message"><b>好きな本をシェアしよう！</b></div>
         </div>
         <div class="body_home">
           <div class="layout_2_div">
+            <div class="img">
+                <%= image_tag"shea.png", class: :shea_img %>
+            </div>
             <div class="text_home">
               <p class="ttl"><b class="important_message">簡単</b>な操作で、<br>好きな本を<b class="important_message">気軽にシェア</b></p>
               <p class="description">「３つの項目を入力」「カテゴリーを選択」この２ステップだけで、あなたの好きな本をシェアできます。気軽にシェアして魅力を伝えましょう。</p>
             </div>
+          </div>
+        </div>
+      </div>
+      <%# 様々な本にで会おう！ %>
+      <div class="area_overview">
+        <div class="head_home">
+          <div class="head_message"><b>様々な本に出会おう！</b></div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="text_home">
+              <p class="ttl"><b class="important_message">新しい本と出会い</b>、<br>趣味の時間を<b class="important_message">より楽しく</b></p>
+              <p class="description">シェアされた投稿を読み、今まで読んだことの無かった本との出会いを経験できます。様々なジャンルの本に出会い趣味の時間を楽しみましょう。</p>
+            </div>
             <div class="img">
-                <%= image_tag("shea.png") %>
+                <%= image_tag("meet.png") %>
             </div>
           </div>
         </div>
-      <%# いろんなほんとで会おう！ %>
+      </div>
       <%# このアプリの機能 %>
       <%# もっと気軽にシェアしませんか？ %>
     </main>

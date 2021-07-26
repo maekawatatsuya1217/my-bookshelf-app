@@ -61,8 +61,9 @@
 
 .head_message{
     display: flex;
-    justify-content: center;
-    font-size: 40px;
+    justify-content: flex-start;
+    font-size: 50px;
+    margin-left: 110px;
 }
 
 .area_overview{
@@ -72,7 +73,7 @@
 }
 
 .body_home{
-    padding: 0 20;
+    padding: 0 20px;
 }
 
 .layout_2_div{
@@ -85,8 +86,6 @@
 .layout_2_div > div{
     width: 40%;
 }
-
-// 概要部分
 
 .text_home .ttl {
     font-size: 37px;
@@ -103,4 +102,8 @@
 .important_message{
     font-size: 37px;
     color: rgb(55, 233, 171);
+}
+
+.shea_img{
+    margin-top: 32px;
 }
