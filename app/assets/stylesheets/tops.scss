@@ -59,11 +59,21 @@
 
 // 2分割レイアウト
 
+.head_home{
+    display: flex;
+}
+
 .head_message{
     display: flex;
     justify-content: flex-start;
-    font-size: 50px;
+    font-size: 70px;
     margin-left: 110px;
+}
+
+.head_message_mini{
+    font-size: 20px;
+    color: rgb(93, 227, 180);
+    margin: 55px 0 0 30px
 }
 
 .area_overview{
@@ -104,6 +114,6 @@
     color: rgb(55, 233, 171);
 }
 
-.shea_img{
+.share_img{
     margin-top: 32px;
 }
