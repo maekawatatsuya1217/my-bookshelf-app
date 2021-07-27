@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -36,7 +37,7 @@
     <%# メイン %>
     <main>
       <div class="area_top_view">
-        <div class="container" style="background-image: url('<%= asset_path('top_view.png') %>')");>
+        <div class="top_view_container" style="background-image: url('<%= asset_path('top_view.png') %>')");>
           <div class="top_message1">あなたの好きな<b class="shea">本</b>、</div>
           <div class="top_message2">もっと<b class="kigaru">気軽</b>に<b class="shea">シェア</b></div>
           <div class="top_message3">しませんか？</div>
@@ -146,12 +147,14 @@
     <footer>
       <% if user_signed_in? %>
           <div class="top_footer">
+            <div class="top_btn", id="btn">トップへ</div>
             <%= link_to "ブログ", blogs_path, class: :footer_logout_btn %>
             <%= link_to "メモ帳", memos_path, class: :footer_logout_btn %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :footer_logout_btn %>
           </div>  
         <% else %>
           <div class="top_footer">
+            <div class="top_btn", id="btn">トップへ</div>
             <%= link_to "ブログ", blogs_path, class: :footer_login_btn %>
             <%= link_to "メモ帳", memos_path, class: :footer_login_btn %>
             <%= link_to "ログイン", new_user_session_path, class: :footer_login_btn %>
