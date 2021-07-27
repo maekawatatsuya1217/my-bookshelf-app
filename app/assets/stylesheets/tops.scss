@@ -192,9 +192,22 @@
 // フッター
 
 .top_footer{
-    height: 100px;
+    height: 150px;
     background-color: rgb(161, 250, 219);
     padding: 35px 300px;
+}
+
+.top_btn{
+    color: rgb(123, 123, 123);
+    width: 78px;
+    margin: 0 0 30px 375px;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+.top_btn:hover{
+    color: black;
+    border-radius: 15px;
 }
 
 .footer_login_btn{

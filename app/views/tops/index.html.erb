@@ -147,6 +147,7 @@
     <footer>
       <% if user_signed_in? %>
           <div class="top_footer">
+            <div class="top_btn", id="btn">トップへ</div>
             <%= link_to "ブログ", blogs_path, class: :footer_logout_btn %>
             <%= link_to "メモ帳", memos_path, class: :footer_logout_btn %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :footer_logout_btn %>
