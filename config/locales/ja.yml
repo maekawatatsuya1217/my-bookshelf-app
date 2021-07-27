@@ -3,8 +3,8 @@ ja:
     attributes:
       user:
         password: パスワード
-        name : 名前
-        favorite_book : お気に入りの本の名前
+        name: 名前
+        favorite_book: お気に入りの本の名前
       blog:
         title: タイトル
         catch_copy: キャッチコピー
@@ -15,3 +15,5 @@ ja:
         name: 本の名前
         point: 要点
         text: メモ
+      comment:
+        text: コメント
