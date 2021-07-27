@@ -15,17 +15,17 @@ RSpec.describe Memo, type: :model do
       it 'nameが空だと追加できない' do
         @memo.name =""
         @memo.valid?
-        expect(@memo.errors.full_messages).to include("Name can't be blank")
+        expect(@memo.errors.full_messages).to include('本の名前を入力してください')
       end
       it 'pointが空だと追加できない' do
         @memo.point = ""
         @memo.valid?
-        expect(@memo.errors.full_messages).to include("Point can't be blank")
+        expect(@memo.errors.full_messages).to include('要点を入力してください')
       end
       it 'textが空では追加できない' do
         @memo.text = ""
         @memo.valid?
-        expect(@memo.errors.full_messages).to include("Text can't be blank")
+        expect(@memo.errors.full_messages).to include('メモを入力してください')
       end
     end
   end

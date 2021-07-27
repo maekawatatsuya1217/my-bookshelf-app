@@ -15,59 +15,59 @@ RSpec.describe User, type: :model do
       it 'nameが空だと登録できない' do
         @user.name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Name can't be blank")
+        expect(@user.errors.full_messages).to include('名前を入力してください')
       end
       it 'emailが空だと登録できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email can't be blank")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
       it '重複したemailが存在する場合は登録できない' do
         @user.save
         another_user = FactoryBot.build(:user)
         another_user.email = @user.email
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Email has already been taken")
+        expect(another_user.errors.full_messages).to include('Eメールはすでに存在します')
       end
       it 'emailは@を含まないと登録できない' do
         @user.email = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email is invalid")
+        expect(@user.errors.full_messages).to include('Eメールは不正な値です')
       end
       it 'passwordが空だと登録できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password can't be blank")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
       it 'passwordが5文字以下の場合は登録できない' do
         @user.password = 'aaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
+        expect(@user.errors.full_messages).to include('パスワードは6文字以上で入力してください')
       end
       it 'passwordが存在していてもpassword_confimartionが空だと登録できない' do
         @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'パスワードは、半角英数字混合での入力が必須であること' do
         @user.password = 'aaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password in half-width characters and alphanumeric characters")
+        expect(@user.errors.full_messages).to include('パスワードには半角の英字と数字の両方を含めて設定してください')
       end
       it 'passwordは数字のみだと登録できないこと' do
         @user.password = '111111'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password in half-width characters and alphanumeric characters")
+        expect(@user.errors.full_messages).to include('パスワードには半角の英字と数字の両方を含めて設定してください')
       end
       it 'passwordは全角だと登録できないこと' do
         @user.password = 'ccc１１１'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password in half-width characters and alphanumeric characters")
+        expect(@user.errors.full_messages).to include('パスワードには半角の英字と数字の両方を含めて設定してください')
       end
       it 'favorite_bookが空だと登録できないこと' do
         @user.favorite_book = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Favorite book can't be blank")
+        expect(@user.errors.full_messages).to include('お気に入りの本の名前を入力してください')
       end
     end
   end
