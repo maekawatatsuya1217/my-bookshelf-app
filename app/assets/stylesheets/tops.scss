@@ -1,0 +1,238 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ヘッダー
+
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    padding: 0 50px;
+}
+
+.container{
+    position: relative;
+    height: calc(100vh - 120px);
+    background-size: cover;
+}
+
+.top_message1{
+    position: absolute;
+    color: rgb(135, 135, 135);
+    font-size: 50px;
+    top: 230px;
+    left: 500px;
+}
+
+.top_message2{
+    position: absolute;
+    color: rgb(135, 135, 135);
+    font-size: 50px;
+    top: 320px;
+    left: 500px;
+}
+
+.top_message3{
+    position: absolute;
+    color: rgb(135, 135, 135);
+    font-size: 50px;
+    top: 450px;
+    left: 500px;
+}
+
+.kigaru{
+    color: rgb(55, 233, 171);
+    font-size: 70px;
+    margin: 0 10px;
+}
+
+.shea{
+    color: rgb(55, 233, 171);
+    font-size: 60px;
+    margin: 0 10px;
+}
+
+// メイン
+
+// 2分割レイアウト
+
+.head_home{
+    display: flex;
+}
+
+.head_message{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 65px;
+    margin-left: 110px;
+}
+
+.head_message_mini{
+    font-size: 20px;
+    color: rgb(93, 227, 180);
+    margin: 55px 0 0 30px
+}
+
+.area_top_page{
+    height: 600px;
+    padding: 50px;
+    margin: 70px 0;
+}
+
+.body_home{
+    padding: 0 20px;
+}
+
+.layout_2_div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 100px 50px 50px;
+}
+
+.layout_2_div > div{
+    width: 40%;
+}
+
+.text_home .ttl {
+    font-size: 37px;
+    margin: 20px 0 20px;
+}
+
+.text_home .description{
+    width: 550px;
+    font-size: 25px;
+    margin-top: 50px;
+    line-height: 45px;
+}
+
+.important_message{
+    font-size: 37px;
+    color: rgb(55, 233, 171);
+}
+
+.share_img{
+    margin-top: 32px;
+}
+
+// 機能一覧
+
+.list_feature{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin-left: 70px;
+}
+
+.list_feature > li{
+    width: 33.33333%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0 50px 0;
+}
+
+.list_feature  .ttl{
+    width: 130px;
+    font-size: 25px;
+    text-align: center;
+    margin: 30px 0 30px;
+}
+
+.list_feature .description{
+    line-height: 30px;
+}
+
+.function_list{
+    color: rgb(55, 233, 171);
+    text-decoration: underline;
+}
+
+// TRYの部分
+
+.area_try{
+    height: 400px;
+    padding: 50px;
+    margin: 70px 0;
+}
+
+.try_description{
+    font-size: 23px;
+}
+
+.right_btn{
+    font-size: 23px;
+    color: rgb(55, 233, 171);
+}
+
+.try_devise_btn{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    margin: 15px;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 20px;
+    background-color: rgb(161, 250, 219);
+}
+
+.try_messages{
+    font: 10px;
+    text-align: center;
+}
+
+// フッター
+
+.top_footer{
+    height: 100px;
+    background-color: rgb(161, 250, 219);
+    padding: 35px 300px;
+}
+
+.footer_login_btn{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 0 59.7px;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.footer_login_btn:hover{
+    color: black;
+    background: rgb(154, 249, 215);
+    border-radius: 15px;
+}
+
+.footer_logout_btn{
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    margin: 0 93.8px;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.footer_logout_btn:hover{
+    color: black;
+    background: rgb(154, 249, 215);
+    border-radius: 15px;
+}

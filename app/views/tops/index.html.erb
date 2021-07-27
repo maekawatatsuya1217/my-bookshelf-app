@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>My-Bookshelf-App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    <%# ヘッダーメニュー %>
+      <div class="header_menu">
+        <div class="area_logo_header">
+          <%= link_to image_tag("head_logo.png", class: :logo), root_path %>
+        </div>
+        <% if user_signed_in? %>
+          <div class="nav_right">
+            <%= link_to "ブログ", blogs_path, class: :nav_btn %>
+            <%= link_to "メモ帳", memos_path, class: :nav_btn %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav_btn %>
+            <i class="fas fa-user fa-fw"></i>
+            <%= link_to current_user.name, "/users/#{current_user.id}", class: :login_user_name %>
+          </div>  
+        <% else %>
+          <div class="nav_right">
+            <%= link_to "ブログ", blogs_path, class: :nav_btn %>
+            <%= link_to "メモ帳", memos_path, class: :nav_btn %>
+            <%= link_to "ログイン", new_user_session_path, class: :nav_btn %>
+            <%= link_to "新規登録", new_user_registration_path, class: :nav_btn %>
+          </div>
+        <% end %>
+      </div>
+    </header>
+    <%# メイン %>
+    <main>
+      <div class="area_top_view">
+        <div class="container" style="background-image: url('<%= asset_path('top_view.png') %>')");>
+          <div class="top_message1">あなたの好きな<b class="shea">本</b>、</div>
+          <div class="top_message2">もっと<b class="kigaru">気軽</b>に<b class="shea">シェア</b></div>
+          <div class="top_message3">しませんか？</div>
+        </div>
+      </div>
+      <%# このアプリの概要 %>
+      <div class="area_top_page">
+        <div class="head_home">
+          <div class="head_message"><b>ABOUT</b></div>
+          <div class="head_message_mini"><b>〜何ができるの？〜</b></div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="text_home">
+              <p class="ttl"><b class="important_message">小学生〜高齢者</b>まで、<br>みんなが楽しめる<b class="important_message">本のSNS</b></p>
+              <p class="description">「本が好きな人」「本に興味がある人」が楽しめるSNSです。自分の好きな本を簡単にシェアしたり、今まで読んだことの無い本とも出会えます。</p>
+            </div>
+            <div class="img">
+                <%= image_tag("app_image.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%# 好きな本をシェアしよう！ %>
+      <div class="area_top_page">
+        <div class="head_home">
+          <div class="head_message"><b>SHARE</b></div>
+          <div class="head_message_mini"><b>〜本をシェアしよう〜</b></div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="img">
+                <%= image_tag"shea.png", class: :share_img %>
+            </div>
+            <div class="text_home">
+              <p class="ttl"><b class="important_message">簡単</b>な操作で、<br>好きな本を<b class="important_message">気軽にシェア</b></p>
+              <p class="description">「３つの項目を入力」「カテゴリーを選択」この２ステップだけで、あなたの好きな本をシェアできます。気軽にシェアして魅力を伝えましょう。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%# 様々な本にで会おう！ %>
+      <div class="area_top_page">
+        <div class="head_home">
+          <div class="head_message"><b>ENCOUNTER</b></div>
+          <div class="head_message_mini"><b>〜本と出会おう〜</b></div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="text_home">
+              <p class="ttl"><b class="important_message">新しい本と出会い</b>、<br>趣味の時間を<b class="important_message">より楽しく</b></p>
+              <p class="description">シェアされた投稿を読み、今まで読んだことの無かった本との出会いを経験できます。様々なジャンルの本に出会い趣味の時間を楽しみましょう。</p>
+            </div>
+            <div class="img">
+                <%= image_tag("meet.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%# このアプリの機能 %>
+      <div class="area_top_page">
+        <div class="head_home">
+          <div class="head_message"><b>FUNCTION</b></div>
+          <div class="head_message_mini"><b>〜アプリの機能〜</b></div>
+        </div>
+        <div class="body_home">
+          <ul class="list_feature">
+            <li>
+              <%= image_tag 'share.png', size: '120x120' %>
+              <p class="ttl"><b><%= link_to "シェア", new_blog_path, class: :function_list %></b></p>
+              <p class="description">読んでみて「面白かった本」「おすすめの本」をブログの記事にして投稿しましょう。多くのユーザーに簡単に本をシェアすることができます。</p>
+            </li>
+            <li>
+              <%= image_tag 'search.png', size: '120x120' %>
+              <p class="ttl"><b><%= link_to "マッチ", search_blogs_path, class: :function_list %></b></p>
+              <p class="description">他のユーザーの記事を見ることで、今までに出会ったことのない本と出会うことができます。記事を読み、新しい本との出会いを探しましょう。</p>
+            </li>
+            <li>
+              <%= image_tag 'memo.png' , size: '120x120' %>
+              <p class="ttl"><b><%= link_to "メモ", new_memo_path, class: :function_list %></b></p>
+              <p class="description">読書で「面白かった！」「感動した！」と思ったことをメモに残しましょう。あなたの本との出会いを毎日記録して、日記や覚書きをしましょう。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <%# アプリを使ってみよう！ %>
+      <div class="area_try">
+        <div class="head_home">
+          <div class="head_message"><b>TRY</b></div>
+          <div class="head_message_mini"><b>〜アプリを使ってみよう！〜</b></div>
+        </div>
+        <div class="body_home">
+          <div class="layout_2_div">
+            <div class="text_home">
+              <p class="try_description">アプリを使って、趣味の時間を楽しもう！<br><br>新規登録はたったの１分で完了します！<br><br>まずは右のボタンをクリック！<b class="right_btn">➡︎</b></p>
+            </div>
+            <div class="try_btn">
+              <P class="try_messages">初めての方はこちら！</P>
+              <%= link_to "新規登録", new_user_registration_path, class: :try_devise_btn %>
+              <P class="try_messages">登録済みの方はこちら！</P>
+              <%= link_to "ログイン", new_user_session_path, class: :try_devise_btn %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <% if user_signed_in? %>
+          <div class="top_footer">
+            <%= link_to "ブログ", blogs_path, class: :footer_logout_btn %>
+            <%= link_to "メモ帳", memos_path, class: :footer_logout_btn %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :footer_logout_btn %>
+          </div>  
+        <% else %>
+          <div class="top_footer">
+            <%= link_to "ブログ", blogs_path, class: :footer_login_btn %>
+            <%= link_to "メモ帳", memos_path, class: :footer_login_btn %>
+            <%= link_to "ログイン", new_user_session_path, class: :footer_login_btn %>
+            <%= link_to "新規登録", new_user_registration_path, class: :footer_login_btn %>
+          </div>
+        <% end %>
+    </footer>
+  </body>
+</html>

@@ -56,7 +56,7 @@ class MemosController < ApplicationController
 
     def unless
         unless user_signed_in? && current_user.id == @memo.user.id
-         redirect_to root_path
+         redirect_to memos_path
         end 
     end
 
