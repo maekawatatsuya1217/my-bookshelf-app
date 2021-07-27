@@ -15,7 +15,7 @@ RSpec.describe Blog, type: :model do
       it 'titleが空だと投稿できない' do
         @blog.title = ''
         @blog.valid?
-        expect(@blog.errors.full_messages).to include('タイトルを入力してください')
+        expect(@blog.errors.full_messages).to include('本の名前を入力してください')
       end
       it 'catch_copyが空だと投稿できない' do
         @blog.catch_copy = ''

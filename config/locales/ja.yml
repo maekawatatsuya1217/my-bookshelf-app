@@ -6,7 +6,7 @@ ja:
         name: 名前
         favorite_book: お気に入りの本の名前
       blog:
-        title: タイトル
+        title: 本の名前
         catch_copy: キャッチコピー
         article: 記事
         category_id: カテゴリー
