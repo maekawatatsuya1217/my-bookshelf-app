@@ -152,6 +152,43 @@
     text-decoration: underline;
 }
 
+// TRYの部分
+
+.area_try{
+    height: 400px;
+    padding: 50px;
+    margin: 70px 0;
+}
+
+.try_description{
+    font-size: 23px;
+}
+
+.right_btn{
+    font-size: 23px;
+    color: rgb(55, 233, 171);
+}
+
+.try_devise_btn{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    margin: 15px;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    border: 1px rgb(123, 123, 123) solid;
+    transition: 0.4s ease;
+    border-radius: 20px;
+    background-color: rgb(161, 250, 219);
+}
+
+.try_messages{
+    font: 10px;
+    text-align: center;
+}
+
 // フッター
 
 .top_footer{
