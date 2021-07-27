@@ -48,7 +48,7 @@ Basic認証
 
 ## トップページ
 
-![トップページの画像](https://gyazo.com/99badac4311e2cbdfd4a4031d55f1baa)
+![トップページの画像](https://gyazo.com/https://i.gyazo.com/99badac4311e2cbdfd4a4031d55f1baa.gif)
 
 トップページはアプリケーションの概要を知らない方が訪問することが想定されます。
  
