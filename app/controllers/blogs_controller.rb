@@ -47,11 +47,7 @@ class BlogsController < ApplicationController
         @blogs = @p.result.includes(:user).with_attached_image.order('created_at DESC')
         set_blog_column
     end
-
-    def category_selection
-        @articles = Blog.where(category_id: params[:id]).includes(:user).order("created_at DESC")
-    end
-
+    
     private
 
     def blog_params

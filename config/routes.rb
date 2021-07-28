@@ -6,9 +6,6 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    member do
-      get 'category_selection'
-    end
   end
   resources :users, only: [:show, :edit, :update]
   resources :memos
