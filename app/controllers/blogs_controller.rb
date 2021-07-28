@@ -48,6 +48,10 @@ class BlogsController < ApplicationController
         set_blog_column
     end
 
+    def category_selection
+        @articles = Blog.where(category_id: params[:id]).includes(:user).order("created_at DESC")
+    end
+
     private
 
     def blog_params
